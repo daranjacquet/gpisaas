@@ -1,16 +1,16 @@
-export type Statut = 'A_FAIRE' | 'EN_COURS' | 'EN_REVUE' | 'TERMINEE'
+export type Status = 'TODO' | 'IN_PROGRESS' | 'IN_REVIEW' | 'DONE'
 
-export type Membre = { id: string; nom: string }
+export type Member = { id: string; name: string }
 
-export type Projet = { id: string; nom: string }
+export type Project = { id: string; name: string }
 
-export type Tache = {
+export type Task = {
   id: string
-  titre: string
-  statut: Statut
-  echeance: string
-  projetId: string
-  membreId: string | null
+  title: string
+  status: Status
+  dueDate: string
+  projectId: string
+  memberId: string | null
 }
 
-export type Idee = { id: string; texte: string }
+export type Idea = { id: string; text: string }

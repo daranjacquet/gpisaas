@@ -1,14 +1,14 @@
 import { useParams } from 'react-router'
-import { useLangue } from '../hooks/useLangue'
+import { useLanguage } from '../hooks/useLanguage'
 
 export default function Kanban() {
   const { id } = useParams()
-  const { t } = useLangue()
+  const { t } = useLanguage()
 
   return (
     <div className="card">
-      <h2>{t('kanban.titre', { id })}</h2>
-      <p>{t('kanban.bientot')}</p>
+      <h2>{t('kanban.title', { id })}</h2>
+      <p>{t('kanban.soon')}</p>
     </div>
   )
 }

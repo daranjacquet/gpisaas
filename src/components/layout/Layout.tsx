@@ -1,9 +1,9 @@
 import { NavLink, Outlet } from 'react-router'
-import { useLangue } from '../../hooks/useLangue'
-import type { Langue } from '../../i18n/traductions'
+import { useLanguage } from '../../hooks/useLanguage'
+import type { Language } from '../../i18n/translations'
 
 export default function Layout() {
-  const { langue, setLangue, t } = useLangue()
+  const { language, setLanguage, t } = useLanguage()
 
   return (
     <>
@@ -13,14 +13,14 @@ export default function Layout() {
           <ul>
             <li>
               <NavLink to="/" end>
-                {t('nav.accueil')}
+                {t('nav.home')}
               </NavLink>
             </li>
             <li>
-              <NavLink to="/tasks">{t('nav.taches')}</NavLink>
+              <NavLink to="/tasks">{t('nav.tasks')}</NavLink>
             </li>
             <li>
-              <NavLink to="/ideas">{t('nav.idees')}</NavLink>
+              <NavLink to="/ideas">{t('nav.ideas')}</NavLink>
             </li>
             <li>
               <NavLink to="/todo">{t('nav.todo')}</NavLink>
@@ -28,9 +28,9 @@ export default function Layout() {
           </ul>
         </nav>
         <select
-          aria-label={t('langue.label')}
-          value={langue}
-          onChange={(e) => setLangue(e.target.value as Langue)}
+          aria-label={t('language.label')}
+          value={language}
+          onChange={(e) => setLanguage(e.target.value as Language)}
         >
           <option value="fr">Français</option>
           <option value="en">English</option>
@@ -39,7 +39,7 @@ export default function Layout() {
       <main>
         <Outlet />
       </main>
-      <footer>{t('footer.texte')}</footer>
+      <footer>{t('footer.text')}</footer>
     </>
   )
 }
