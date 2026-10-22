@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router'
 
-export default function TaskDetail() {
+export default function FicheTache() {
   const { id } = useParams()
 
   return (
