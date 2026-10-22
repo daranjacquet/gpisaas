@@ -1,12 +1,12 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router";
-import Layout from "./components/layout/Layout";
-import Home from "./pages/Home";
-import Tasks from "./pages/Tasks";
-import TaskDetail from "./pages/TaskDetail";
-import TaskForm from "./pages/TaskForm";
-import Kanban from "./pages/Kanban";
-import Ideas from "./pages/Ideas";
-import Todo from "./pages/Todo";
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import Tasks from './pages/Tasks'
+import TaskDetail from './pages/TaskDetail'
+import TaskForm from './pages/TaskForm'
+import Kanban from './pages/Kanban'
+import Ideas from './pages/Ideas'
+import Todo from './pages/Todo'
 
 export default function App() {
   return (
@@ -25,5 +25,5 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
