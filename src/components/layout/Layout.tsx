@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router'
+import { FiltersProvider } from '../../context/FiltersProvider'
 import { useLanguage } from '../../hooks/useLanguage'
 import type { Language } from '../../i18n/translations'
 
@@ -37,7 +38,9 @@ export default function Layout() {
         </select>
       </header>
       <main>
-        <Outlet />
+        <FiltersProvider>
+          <Outlet />
+        </FiltersProvider>
       </main>
       <footer>{t('footer.text')}</footer>
     </>

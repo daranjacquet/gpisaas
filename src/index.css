@@ -63,3 +63,15 @@ nav a.active {
   border-radius: 6px;
   text-decoration: none;
 }
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.filters label {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

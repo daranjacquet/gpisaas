@@ -1,4 +1,5 @@
-import { Link } from 'react-router'
+import { FilterBar } from '../components/filters/FilterBar'
+import { TaskList } from '../components/tasks/TaskList'
 import { useFetch } from '../hooks/useFetch'
 import { useLanguage } from '../hooks/useLanguage'
 import { API_URL } from '../services/api'
@@ -11,18 +12,10 @@ export default function Tasks() {
   return (
     <div className="card">
       <h2>{t('tasks.title')}</h2>
+      <FilterBar />
       {loading && <p>{t('common.loading')}</p>}
       {error && <p role="alert">{t('tasks.error')}</p>}
-      {tasks?.length === 0 && <p>{t('tasks.empty')}</p>}
-      {tasks && tasks.length > 0 && (
-        <ul>
-          {tasks.map((task) => (
-            <li key={task.id}>
-              <Link to={`/tasks/${task.id}`}>{task.title}</Link> — {t(`status.${task.status}`)}
-            </li>
-          ))}
-        </ul>
-      )}
+      {tasks && <TaskList tasks={tasks} />}
     </div>
   )
 }
