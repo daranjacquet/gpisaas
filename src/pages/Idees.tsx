@@ -1,4 +1,4 @@
-export default function Ideas() {
+export default function Idees() {
   return (
     <div className="card">
       <h2>Backlog d'idées</h2>

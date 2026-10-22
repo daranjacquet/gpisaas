@@ -1,4 +1,4 @@
-export default function Tasks() {
+export default function Taches() {
   return (
     <div className="card">
       <h2>Mes tâches</h2>

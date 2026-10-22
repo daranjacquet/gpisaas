@@ -1,4 +1,4 @@
-export default function Todo() {
+export default function MaTodo() {
   return (
     <div className="card">
       <h2>Ma to-do</h2>
