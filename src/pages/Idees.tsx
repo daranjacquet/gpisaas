@@ -1,8 +1,12 @@
+import { useLangue } from '../hooks/useLangue'
+
 export default function Idees() {
+  const { t } = useLangue()
+
   return (
     <div className="card">
-      <h2>Backlog d'idées</h2>
-      <p>La capture et le tri des idées seront ajoutés ensuite.</p>
+      <h2>{t('idees.titre')}</h2>
+      <p>{t('idees.bientot')}</p>
     </div>
   )
 }

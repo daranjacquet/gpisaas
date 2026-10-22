@@ -1,1 +1,54 @@
-{ "taches": [], "projets": [], "membres": [], "idees": [] }
+{
+  "taches": [
+    {
+      "id": "t-1",
+      "titre": "Maquetter le Kanban",
+      "statut": "EN_COURS",
+      "echeance": "2026-10-30",
+      "projetId": "p-1",
+      "membreId": "m-1"
+    },
+    {
+      "id": "t-2",
+      "titre": "Écrire l'API des tâches",
+      "statut": "A_FAIRE",
+      "echeance": "2026-11-05",
+      "projetId": "p-1",
+      "membreId": "m-2"
+    },
+    {
+      "id": "t-3",
+      "titre": "Relire la PR des filtres",
+      "statut": "EN_REVUE",
+      "echeance": "2026-10-24",
+      "projetId": "p-1",
+      "membreId": "m-3"
+    },
+    {
+      "id": "t-4",
+      "titre": "Préparer la démo client",
+      "statut": "A_FAIRE",
+      "echeance": "2026-11-12",
+      "projetId": "p-2",
+      "membreId": null
+    },
+    {
+      "id": "t-5",
+      "titre": "Tests e2e de la connexion",
+      "statut": "TERMINEE",
+      "echeance": "2026-10-20",
+      "projetId": "p-2",
+      "membreId": "m-1"
+    }
+  ],
+  "projets": [
+    { "id": "p-1", "nom": "Refonte du site" },
+    { "id": "p-2", "nom": "Application mobile" }
+  ],
+  "membres": [
+    { "id": "m-1", "nom": "Inès Morel" },
+    { "id": "m-2", "nom": "Hugo Lefèvre" },
+    { "id": "m-3", "nom": "Sarah Benali" }
+  ],
+  "idees": [{ "id": "i-1", "texte": "Ajouter un mode sombre" }]
+}
