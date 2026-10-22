@@ -2,10 +2,8 @@ import { useFetch } from '../../hooks/useFetch'
 import { useFilters } from '../../hooks/useFilters'
 import { useLanguage } from '../../hooks/useLanguage'
 import { API_URL } from '../../services/api'
-import type { Member, Status } from '../../types'
+import { STATUSES, type Member } from '../../types'
 import type { Filters } from './filtersReducer'
-
-const statuses: Status[] = ['TODO', 'IN_PROGRESS', 'IN_REVIEW', 'DONE']
 
 export function FilterBar() {
   const { t } = useLanguage()
@@ -23,7 +21,7 @@ export function FilterBar() {
           }
         >
           <option value="ALL">{t('filters.allStatuses')}</option>
-          {statuses.map((status) => (
+          {STATUSES.map((status) => (
             <option key={status} value={status}>
               {t(`status.${status}`)}
             </option>
