@@ -1,22 +1,20 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router'
-import AppLayout from './components/layout/AppLayout'
-import HomePage from './pages/HomePage'
-import TaskDetailPage from './pages/TaskDetailPage'
-import TasksPage from './pages/TasksPage'
+import Layout from './components/layout/Layout'
+import Home from './pages/Home'
+import Tasks from './pages/Tasks'
+import TaskDetail from './pages/TaskDetail'
 
-function App() {
+export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<AppLayout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/tasks" element={<TasksPage />} />
-          <Route path="/tasks/:id" element={<TaskDetailPage />} />
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/tasks" element={<Tasks />} />
+          <Route path="/tasks/:id" element={<TaskDetail />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
   )
 }
-
-export default App
