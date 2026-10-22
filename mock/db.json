@@ -1,1 +1,54 @@
-{ "taches": [], "projets": [], "membres": [], "idees": [] }
+{
+  "tasks": [
+    {
+      "id": "t-1",
+      "title": "Design the Kanban mockup",
+      "status": "IN_PROGRESS",
+      "dueDate": "2026-10-30",
+      "projectId": "p-1",
+      "memberId": "m-1"
+    },
+    {
+      "id": "t-2",
+      "title": "Write the tasks API",
+      "status": "TODO",
+      "dueDate": "2026-11-05",
+      "projectId": "p-1",
+      "memberId": "m-2"
+    },
+    {
+      "id": "t-3",
+      "title": "Review the filters PR",
+      "status": "IN_REVIEW",
+      "dueDate": "2026-10-24",
+      "projectId": "p-1",
+      "memberId": "m-3"
+    },
+    {
+      "id": "t-4",
+      "title": "Prepare the client demo",
+      "status": "TODO",
+      "dueDate": "2026-11-12",
+      "projectId": "p-2",
+      "memberId": null
+    },
+    {
+      "id": "t-5",
+      "title": "Login e2e tests",
+      "status": "DONE",
+      "dueDate": "2026-10-20",
+      "projectId": "p-2",
+      "memberId": "m-1"
+    }
+  ],
+  "projects": [
+    { "id": "p-1", "name": "Website redesign" },
+    { "id": "p-2", "name": "Mobile app" }
+  ],
+  "members": [
+    { "id": "m-1", "name": "Inès Morel" },
+    { "id": "m-2", "name": "Hugo Lefèvre" },
+    { "id": "m-3", "name": "Sarah Benali" }
+  ],
+  "ideas": [{ "id": "i-1", "text": "Add a dark mode" }]
+}
