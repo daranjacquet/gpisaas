@@ -7,15 +7,14 @@ import type { Task } from '../../types'
 export function useFilteredTasks() {
   const { filters } = useFilters()
   const search = useDebounce(filters.search.trim())
-  const url = `${API_URL}/tasks?title:contains=${encodeURIComponent(search)}`
-  const { data, loading, error } = useFetch<Task[]>(url)
 
-  const tasks = data?.filter(
-    (task) =>
-      (filters.status === 'ALL' || task.status === filters.status) &&
-      (filters.memberId === null || task.memberId === filters.memberId),
-  )
-  const isFiltered = filters.status !== 'ALL' || filters.memberId !== null || search !== ''
+  const params = new URLSearchParams()
+  if (filters.status !== 'ALL') params.set('status', filters.status)
+  if (filters.memberId !== null) params.set('memberId', filters.memberId)
+  if (search !== '') params.set('title:contains', search)
+
+  const { data: tasks, loading, error } = useFetch<Task[]>(`${API_URL}/tasks?${params}`)
+  const isFiltered = params.size > 0
 
   return { tasks, loading, error, isFiltered }
 }
