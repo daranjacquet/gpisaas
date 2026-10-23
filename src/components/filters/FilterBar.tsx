@@ -13,6 +13,14 @@ export function FilterBar() {
   return (
     <div className="filters">
       <label>
+        {t('filters.search')}
+        <input
+          type="search"
+          value={filters.search}
+          onChange={(e) => dispatch({ type: 'search', text: e.target.value })}
+        />
+      </label>
+      <label>
         {t('filters.status')}
         <select
           value={filters.status}
