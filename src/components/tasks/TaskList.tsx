@@ -13,7 +13,7 @@ export function TaskList({ tasks }: { tasks: Task[] }) {
       (filters.memberId === null || task.memberId === filters.memberId),
   )
 
-  if (tasks.length === 0) return <p>{t('tasks.empty')}</p>
+  if (tasks.length === 0 && filters.search === '') return <p>{t('tasks.empty')}</p>
   if (visibleTasks.length === 0) return <p>{t('tasks.noMatch')}</p>
 
   return (
